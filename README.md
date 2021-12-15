@@ -8,5 +8,5 @@ Made By Abdelaziz El Hassouni.
 
 ## Preview
 
-Preview the app live on [StackBlitz](http://stackblitz.com/):
+Preview the app live on [Darak](https://darak-app.vercel.app):
 
