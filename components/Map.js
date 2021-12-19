@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import { getCenter } from "geolib/es/getCenter";
 
-const Map = ({ searchResult }) => {
+const Map = ({ searchResults }) => {
   const [selectedSelection, setSelectedSelection] = useState({});
   const viewportChangeHandler = (nextViewport) => {
     setViewport(nextViewport);
   };
 
-  const coordinates = searchResult.map((item) => ({
+  const coordinates = searchResults.map((item) => ({
     latitude: item.lat,
     longitude: item.long,
   }));
@@ -30,7 +30,7 @@ const Map = ({ searchResult }) => {
       {...viewport}
       onViewportChange={viewportChangeHandler}
     >
-      {searchResult.map((item) => (
+      {searchResults.map((item) => (
         <div key={item.long}>
           <Marker
             longitude={item.long}
